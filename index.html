@@ -334,7 +334,16 @@ footer{
 </head>
 
 </head>
-<nav><div class="logo">VORAX LUXE PARFUMS</div><div><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a></div></nav>
+<nav>
+<div class="logo">VORAX LUXE PARFUMS</div>
+
+<div>
+<a href="#catalogo">Catálogo</a>
+<a href="#carrito">🛒 Carrito</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+</nav>
 <header class="hero"><h1>VORAX</h1><p>·La Huella Que Perdura·</p><a class="btn" href="#catalogo">Comprar</a></header>
 <section id="catalogo"><h2>Catálogo</h2><div class="grid">
 <div class="card"><img src="https://http2.mlstatic.com/D_NQ_NP_784678-MLA92807646277_092025-O.webp/400x260?text=Dior"><h3>Dior Sauvage</h3><p>$2,500 MXN</p><button onclick="add('Dior Sauvage')">Agregar</button></div>
@@ -355,11 +364,29 @@ footer{
 Agregar</button></div>
 </div></section>
 
+<div id="carrito" style="margin-top:30px;background:#111;padding:20px;border-radius:15px;">
+<h3 style="color:#d4af37;">🛒 Carrito (<span id="contador">0</span>)</h3>
+
+<ul id="listaCarrito" style="margin:15px 0;"></ul>
+
+<button onclick="vaciarCarrito()" style="background:#ff3333;color:white;">
+Vaciar carrito
+</button>
+
+
+
+<a id="pedidoWhatsapp" class="whatsapp" href="#" target="_blank">
+Enviar pedido por WhatsApp
+</a>
+
+</div>
+
+
 <footer id="contacto">
 
 <h3>¿Quieres comprar?</h3>
 
-<p>¡Contáctanos!</p>
+<p>Contáctanos directamente y personaliza tu pedido!!!</p>
 
 <a class="whatsapp" href="https://wa.me/525529946456" target="_blank">
 💬 WhatsApp VORAX
@@ -369,14 +396,89 @@ Agregar</button></div>
 
 
 <script>
+function eliminarProducto(indice){
+
+    c.splice(indice,1);
+
+    actualizarCarrito();
+
+}
+
 let c=[];
 
 function add(n){
+
     c.push(n);
-    alert(n+' agregado. Carrito: '+c.length);
+
+    actualizarCarrito();
+
+    alert(n+" agregado al carrito");
+
 }
+
+
+function actualizarCarrito(){
+
+    let lista=document.getElementById("listaCarrito");
+    let contador=document.getElementById("contador");
+    let whatsapp=document.getElementById("pedidoWhatsapp");
+if(c.length==0){
+    whatsapp.style.display="none";
+}else{
+    whatsapp.style.display="inline-block";
+}
+
+
+    lista.innerHTML="";
+
+
+    c.forEach(function(producto, indice){
+
+    let li=document.createElement("li");
+
+    li.style.margin="10px 0";
+
+    li.innerHTML=
+    "✔ "+producto+
+    ' <button onclick="eliminarProducto('+indice+')" style="background:#ff3333;color:white;padding:5px 12px;margin-left:10px;">Eliminar</button>';
+
+    lista.appendChild(li);
+
+});
+
+
+    contador.textContent=c.length;
+
+
+    let mensaje="Hola VORAX LUXE PARFUMS, quiero realizar un pedido:%0A%0A";
+
+
+    c.forEach(function(producto){
+
+        mensaje += "• "+producto+"%0A";
+
+    });
+
+
+    mensaje += "%0AQuedo atento a la confirmación de disponibilidad y a los detalles de entrega: fecha, hora y ubicación. Quedo pendiente de su respuesta para finalizar mi compra.";
+
+    
+    whatsapp.href=
+    "https://wa.me/525529946456?text="+mensaje;
+
+
+}
+
+    
+function vaciarCarrito(){
+
+    c=[];
+
+    actualizarCarrito();
+
+}
+
 </script>
 
 </body>
 </html>
-
