@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VORAX LUXE PARFUMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VORAX</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+	
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#090909;
+    color:#fff;
+}
+
+/*==================== MENÚ ====================*/
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 10px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.logo{
+    color:#d4af37;
+    font-weight:800;
+    font-size:28px;
+    letter-spacing:4px;
+}
+
+/*==================== HERO ====================*/
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+    url('https://static.vecteezy.com/system/resources/thumbnails/071/876/695/small/a-golden-perfume-bottle-stands-elegantly-against-a-dark-background-with-warm-glowing-bokeh-lights-photo.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+/*==================== TITULO ====================*/
+
+.hero h1{
+
+    font-family:Georgia,serif;
+
+    font-size:90px;
+
+    font-weight:bold;
+
+    color:#1E90FF;
+
+    letter-spacing:10px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+    0 0 8px #1E90FF,
+    0 0 20px #1E90FF,
+    0 0 40px #0066ff;
+
+    animation:brillo 2s infinite alternate;
+
+}
+
+/*==================== ESLOGAN ====================*/
+
+.hero p{
+
+    margin-top:15px;
+
+    font-size:30px;
+
+    color:#FFD700;
+
+    font-style:italic;
+
+    letter-spacing:5px;
+
+    text-shadow:
+    0 0 10px rgba(255,215,0,.7);
+
+}
+
+/*==================== BOTÓN ====================*/
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    background:#d4af37;
+
+    color:#000;
+
+    text-decoration:none;
+
+    border-radius:35px;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 25px #d4af37;
+
+}
+
+/*==================== CATÁLOGO ====================*/
+
+section{
+
+    padding:70px 8%;
+
+}
+
+h2{
+
+    text-align:center;
+
+    color:#d4af37;
+
+    margin-bottom:30px;
+
+    font-size:40px;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:#161616;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 25px rgba(212,175,55,.4);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+button{
+
+    margin-top:12px;
+
+    padding:10px 18px;
+
+    background:#d4af37;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#FFD700;
+
+    transform:scale(1.05);
+
+}
+
+footer{
+
+    background:#000;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+/*==================== ANIMACIÓN ====================*/
+
+@keyframes brillo{
+
+    from{
+
+        text-shadow:
+        0 0 10px #1E90FF,
+        0 0 25px #1E90FF,
+        0 0 45px #0066ff;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 20px #5DAEFF,
+        0 0 40px #1E90FF,
+        0 0 80px #0066ff;
+
+    }
+
+}
+/*==================== WHATSAPP ====================*/
+
+.whatsapp{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:15px 35px;
+
+    background:#25D366;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+    box-shadow:0 0 15px rgba(37,211,102,.6);
+
+}
+
+
+.whatsapp:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 30px #25D366;
+
+}
+
+</style>
+
+</head>
+
+</head>
+<nav><div class="logo">VORAX LUXE PARFUMS</div><div><a href="#catalogo">Catálogo</a><a href="#contacto">Contacto</a></div></nav>
+<header class="hero"><h1>VORAX</h1><p>·La Huella Que Perdura·</p><a class="btn" href="#catalogo">Comprar</a></header>
+<section id="catalogo"><h2>Catálogo</h2><div class="grid">
+<div class="card"><img src="https://http2.mlstatic.com/D_NQ_NP_784678-MLA92807646277_092025-O.webp/400x260?text=Dior"><h3>Dior Sauvage</h3><p>$2,500 MXN</p><button onclick="add('Dior Sauvage')">Agregar</button></div>
+<div class="card"><img src="https://www.ulta.com.mx/p/media_15b5132075c5663178e4ac353657f08d6ba0c24da.webp?width=750&format=webp&optimize=medium/400x260?text=Valentino"><h3>Valentino Uomo</h3><p>$2,500 MXN</p><button onclick="add('Valentino Uomo')">Agregar</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gy3OZDEOvAoUCjy559FAMj2aw9viYsim1kLySnA1ous8ZB9NoOdu2fo&s=10/400x260?text=212+VIP"><h3>212 VIP BLACK</h3><p>$1,500 MXN</p><button onclick="add('212 VIP BLACK')">Agregar</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9T-1wJBok8ZM-vacjUUdVCvBQ-sM0yVJlT7rU6XEJ7g&s=10/400x260?text=OK New York"><h3>OK New York</h3><p>$350 MXN</p><button onclick="add('OK New York')">Agregar</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUvQ3l1UQ8xpiw947AM9vbUcpiAe4J8fmmTxE1W0oFmWhQBjVhlPQ9PvM&s=10/400x260?text=Aqcuad Id Gio"><h3>Aqcuad Id Gio ESENA </h3><p>$250 MXN</p><button onclick="add('Aqcuad Id Gio')">Agregar</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnluf0XyzUieq4Pmv-a9srrUT74gNX_CvSRRoymaHxqr4o-szdGmZhk7k&s=10/400x260?text=Invistuc"><h3>Invistuc </h3><p>$450 MXN</p><button onclick="add('Invistuc')">Agregar</button></div>
+<div class="card"><img src="https://perfumegallery.com.mx/cdn/shop/files/3412242508027_1.png?v=1774646728&width=1946/400x260?text=Navy Blue Eau De Toilette"><h3>Navy Blue Eau De Toilette </h3><p>$400 MXN</p><button onclick="add('Navy Blue Eau De Toilette')">Agregar</button></div>
+<div class="card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHVHOp4UB4ZtSHRk4mMhlpDZy30LHkR8xnw0djUNZuRwFnZ2vV3YW-edk&s=10/400x260?text=Horus Azul Marine"><h3>Horus Azul Marine</h3><p>$400 MXN</p><button onclick="add('Horus Azul Marine')">Agregar</button></div>
+<div class="card"><img src="https://arome.mx/cdn/shop/files/fragrance-mist-pure-seduction-para-mujer-de-victoria-s-secret-250ml-arome-mexico-1_1200x1200.jpg?v=1741106108/400x260?text=Victoria Secret"><h3>Victoria Secret Pure Seduction</h3><p>$200 MXN</p><button onclick="add('Victoria Secret')">
+
+
+
+
+
+
+Agregar</button></div>
+</div></section>
+
+<footer id="contacto">
+
+<h3>¿Quieres comprar?</h3>
+
+<p>Contáctanos directamente por WhatsApp</p>
+
+<a class="whatsapp" href="https://wa.me/525529946456" target="_blank">
+💬 WhatsApp VORAX
+</a>
+
+</footer>
+
+
+<script>
+let c=[];
+
+function add(n){
+    c.push(n);
+    alert(n+' agregado. Carrito: '+c.length);
+}
+</script>
+
+</body>
+</html>
